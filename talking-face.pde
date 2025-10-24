@@ -9,8 +9,6 @@ float v;
 float easing = 0.05;
 float vprior;
 
-
-// these are all defined on the first page, if that makes any difference.
 PFont font;
 
 void setup() {
@@ -41,17 +39,6 @@ void draw() {
   v = int(map(volume, 0, 1, 1, width));
   v=v*5; //20
   println("volume="+v);
-
-  ////PASTE YOUR CODE FROM YOUR DRAW FUNCTION HERE
-//  v=mouseX;  //comment when ready to use volume
-
- // background(255);
-
-  //push popmatrix the whole code if needed otherwise comment out the translate
-
-  //push();
-  //translate(width/2, height/2);
-   //v = mouseY;
 
   float dvFill = v - vprior;  //target v -vprior
   if(abs(dvFill) > 1) {
@@ -249,7 +236,7 @@ void draw() {
   fill(150);
   textFont(font, 14);
   textAlign(CENTER);
-  String credits = "Serena Flaxenburg";  //Your Name
+  String credits = "Serena Flaxenburg"; 
   text(credits, width/2, height-10);
   fill(255);
 }
